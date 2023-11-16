@@ -1,0 +1,196 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome Page{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+    <a class="weatherwidget-io" href="https://forecast7.com/en/n6d92107d62/bandung/" data-label_1="BANDUNG" data-label_2="WEATHER" data-icons="Climacons" data-theme="original" data-basecolor="#7b1e1e" >BANDUNG WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+    
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://akcdn.detik.net.id/visual/2023/11/14/ktt-liga-arab_169.jpeg?w=650&q=90" style="filter: brightness(60%);" class="d-block w-100" width="1350" height="500">
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: maroon; margin-top: 300px; font-size: 32px;">Kenapa Negara Arab Tolak Usul Iran Embargo Minyak ke Israel?</h1></center>
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: white; margin-top: 350px; font-size: 13px;">Presiden Iran Ebrahim Raisi mengusulkan negara-negara Arab untuk mengembargo minyak Israel sebagai salah satu hukuman atas agresi ke Jalur Gaza Palestina sejak 7 Oktober.</h1></center>
+    </div>
+    <div class="carousel-item">
+      <img src="https://akcdn.detik.net.id/visual/2023/11/11/rs-al-shifa-gaza-jadi-target-serangan-israel_169.jpeg?w=650&q=90" style="filter: brightness(60%);" class="d-block w-100" width="1350" height="500">
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: maroon; margin-top: 300px; font-size: 32px;">Drone-Tank Israel Masih Kepung RS Al Shifa Gaza, Sniper Tembaki Pasien</h1></center>
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: white; margin-top: 350px; font-size: 13px;">Staf Doctors Without Borders (Medicins Sans Frontieres/MSF) melaporkan situasi horor di RS Al Shifa Jalur Gaza Palestina yang masih dikepung drone hingga tank Israel hingga Senin (13/11).</h1></center>
+    </div>
+    <div class="carousel-item">
+      <img src="https://akcdn.detik.net.id/visual/2023/11/01/dahsyatnya-bom-israel-tinggalkan-kawah-besar-di-kamp-pengungsi-jabalia-1_169.jpeg?w=650&q=90" style="filter: brightness(60%);" class="d-block w-100" width="1350" height="500">
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: maroon; margin-top: 300px; font-size: 32px;">Israel Bombardir Lagi 2 Kamp Pengungsi di Gaza dalam Semalam</h1></center>
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: white; margin-top: 350px; font-size: 13px;">Militer Israel lagi-lagi membombardir kamp pengungsi di Jalur Gaza Palestina pada Senin (13/11) malam.</h1></center>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+              <br><br><br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <img src="https://akcdn.detik.net.id/community/media/visual/2023/11/05/kamp-pengungsi-maghazi-di-gaza-diserang-israel-30-orang-tewas-1_169.jpeg?w=700&q=90" style="filter: brightness(60%);" class="d-block w-30" alt="">
+                  </div>
+                  <div class="col">
+                    <br><br>
+                    <H3 class="fw-bold" style="font-family: sans-serif;">Berita Terkini</H3>
+                    <p style="font-family: sans-serif;">Kementerian Kesehatan yang dikelola Hamas mengatakan jumlah korban tewas di Gaza telah melampaui 10.000 orang. Jumlah tersebut merupakan akumulasi setelah hampir satu bulan pemboman oleh Israel yang meningkatkan serangannya terhadap militan Palestina.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <br><br><br>
+
+              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Hangat</h3>
+
+              <br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                  {% for Berita in beritas %}
+                  <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="{{Berita.gambar.url}}" class="img-fluid rounded-start w-100 h-100" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">{{Berita.judul}}</h5>
+                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
+                            <p class="card-text"><small class="text-body-secondary">{{Berita.kategori}}</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+
+
+              <br><br><br>
+
+              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
+
+              <br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://akcdn.detik.net.id/visual/2021/12/30/kim-jong-un_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kim Jong Un Dukung Palestina sampai Roket Hizbullah Hujani Kota Israel</h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-danger">Selengkapnya</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://thumb.tvonenews.com/thumbnail/2023/11/08/654ae7c8ab789-warga-palestina-mengevakuasi-seorang-pemuda-yang-terluka-menyusul-serangan-udara-israel-di-kamp-pengungsi-khan-younis-jalur-gaza-selatan-selasa-7-november-2023_1265_711.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Palang Merah Internasional: Konvoi Kemanusiaan Bawa Pasokan Medis Mendapat Tembakan di Gaza</h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-danger">Selengkapnya</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://akcdn.detik.net.id/visual/2023/11/05/britain-israel-palestinians_169.jpeg?w=1300&q=80" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Penampakan Warga Dunia Kompak Turun ke Jalan Bela Palestina</h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-danger">Selengkapnya</a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <br><br><br>
+
+                <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+           <a href="#">Scanfcode</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 350px;
+}
+
+.photos {
+  height: 240px;
+  position: relative;
+}
+
+.photos .cover_photo {
+  height: 10000px;
+  width: 10000px;
+}
+
+.photos .profile_picture {
+  height: 180px;
+  width: 180px;
+  border-radius: 160px;
+  overflow: hidden;
+}
+
+img {
+  size: 100px;
+}

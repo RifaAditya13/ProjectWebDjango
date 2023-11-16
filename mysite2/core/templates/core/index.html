@@ -1,0 +1,209 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome Page{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+    <a class="weatherwidget-io" href="https://forecast7.com/en/n6d92107d62/bandung/" data-label_1="BANDUNG" data-label_2="WEATHER" data-icons="Climacons" data-theme="original" data-basecolor="#7b1e1e" >BANDUNG WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+    
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://akcdn.detik.net.id/visual/2022/08/16/nilai-tukar-rupiah-1_169.jpeg?w=650&q=90" style="filter: brightness(60%);" class="d-block w-100" width="1350" height="500">
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: maroon; margin-top: 300px; font-size: 32px;">BI Ungkap 5 Kekuatan Rupiah Hingga Gagal Ditekuk Dolar ke Rp16 Ribu</h1></center>
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: white; margin-top: 350px; font-size: 13px;">Bank Indonesia (BI) mengungkap sejumlah kekuatan yang dimiliki rupiah sehingga dolar AS gagal menekuk mata uang Garuda tersebut ke level Rp16 ribu.</h1></center>
+    </div>
+    <div class="carousel-item">
+      <img src="https://akcdn.detik.net.id/visual/2023/11/13/soccer-england-che-mcireport_169.jpeg?w=650&q=90" style="filter: brightness(60%);" class="d-block w-100" width="1350" height="500">
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: maroon; margin-top: 300px; font-size: 32px;">Klasemen Liga Inggris: Man City Gagal Jauhi Liverpool dan Arsenal</h1></center>
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: white; margin-top: 350px; font-size: 13px;">Klasemen Liga Inggris mengalami perubahan usai Manchester City ditahan imbang Chelsea, Minggu (12/11) malam. Berikut klasemen Liga Inggris usai Man City gagal jauhi Liverpool dan Arsenal.</h1></center>
+    </div>
+    <div class="carousel-item">
+      <img src="https://akcdn.detik.net.id/visual/2023/11/14/ktt-liga-arab_169.jpeg?w=650&q=90" style="filter: brightness(60%);" class="d-block w-100" width="1350" height="500">
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: maroon; margin-top: 300px; font-size: 32px;">Kenapa Negara Arab Tolak Usul Iran Embargo Minyak ke Israel?</h1></center>
+      <center><h1 style="position:absolute; left:0px; width: 100%; top: 50px; color: white; margin-top: 350px; font-size: 13px;">Presiden Iran Ebrahim Raisi mengusulkan negara-negara Arab untuk mengembargo minyak Israel sebagai salah satu hukuman atas agresi ke Jalur Gaza Palestina sejak 7 Oktober.</h1></center>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+              <br><br><br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <img src="https://ugm.ac.id/wp-content/uploads/2023/10/israel.bmp" style="filter: brightness(60%);" alt="">
+                  </div>
+                  <div class="col">
+                    <br><br>
+                    <H3 class="fw-bold" style="font-family: sans-serif;">Berita Terkini</H3>
+                    <p style="font-family: sans-serif;">Konflik Palestina-Israel kembali muncul dalam beberapa hari terakhir. Hal ini dipicu oleh serangan Hamas Palestina terhadap Israel di wilayah selatan jalur Gaza pada Sabtu (7/10). Serangan diperkirakan terjadi untuk membalas berbagai tekanan dan serangan yang dilakukan Israel terhadap Palestina selama bertahun-tahun. Hingga saat ini, korban konflik Palestina-Israel dikabarkan telah mencapai 2.300 korban jiwa dan 8.900 korban luka-luka di kedua belah pihak.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <br><br><br>
+
+              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Hangat</h3>
+
+              <br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="https://akcdn.detik.net.id/visual/2022/08/04/ilustrasi-netizen-atau-warganet_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Ganjar Mahfud Trending Topic, Netizen Wanti-wanti Potensi PHP Lagi</h5>
+                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="https://akcdn.detik.net.id/visual/2023/10/05/keterangan-pers-kuasa-hukum-syahrul-yasin-limpo-1_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Alasan KPK Cegah Febri Diansyah dkk ke Luar Negeri Terkait Kasus SYL</h5>
+                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br><br><br>
+
+              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
+
+              <br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01heehsbrptzbs8c3n58yxkb6e.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ciri-Ciri Gaya Hidup Berkelanjutan dan Pengertiannya</h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-danger bg-danger">Go somewhere</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://thumb.viva.id/antvklik/1265x711/2023/11/06/6548ab1aa60bf-festival-antv-rame-meriahkan-kulon-progo_antvklik.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Festival ANTV Rame Meriahkan Kulon Progo dengan Hiburan yang Tak Terlupakan!</h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-danger bg-danger">Go somewhere</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://cdn1-production-images-kly.akamaized.net/vetNeyQyOykgze2BCIYydPrdn1A=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4638104/original/084163100_1699307938-AP23310745767553.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Hasil dan Klasemen Liga Inggris Tadi Malam: Dipecundangi Chelsea, Tottenham Tergeser Man City di Posisi Puncak</h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-danger bg-danger">Go somewhere</a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <br><br><br>
+
+                <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+           <a href="#">Scanfcode</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome Page{% endblock %}</title>
+    {% block htmlhead %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'isi.css' %}">
+    {% endblock htmlhead %}
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="cover">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230419/pngtree-nature-animated-red-cloud-clouds-watercolor-image_2416873.jpg" class="background" alt="">
+            <img style="border-radius: 50%; width: 180px; height: 180px; margin-left: 100px; margin-top: -120px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Logo_of_CNN_Indonesia.svg/1200px-Logo_of_CNN_Indonesia.svg.png" clas  s="rounded-circle                                   " alt="">
+            <H2 class="name" style="border-radius: 50%; margin-left: 300px; margin-top: -120px; color: white;">CNN INDONESIA</H2>
+        </div>
+    </div>
+
+    <H1 style="margin: 100px;">Warga Gaza Kibarkan Bendera Putih sampai Ahli Senjata Hamas Dibunuh</H1>
+    <img src="https://akcdn.detik.net.id/visual/2023/11/08/warga-gaza-berjalan-kaki-ke-arah-selatan-hindari-serangan-israel-4_169.jpeg?w=650&q=90" style="margin-top: -65px; margin-left: 100px;" alt="">
+
+    <br><br>
+
+    <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <p>Jakarta, CNN Indonesia -- Warga Palestina di utara Gaza berjalan kaki untuk evakuasi ke wilayah selatan sambil membawa bendera putih, usai militer Israel memberikan jeda selama empat jam.
+                Israel juga mengklaim telah membunuh salah satu senior milisi Hamas, yang menjadi pemasok senjata bagi kelompok itu.Berikut Kilas Internasional hari ini, Kamis (9/11).</p> 
+                <br>
+                <h3>1. Warga Palestina Kibarkan Bendera Putih saat Mengungsi ke Selatan Gaza</h3>
+                <p>Warga Palestina berjalan kaki mengevakuasi diri dari Gaza utara ke selatan, sambil membawa kartu identitas dan bendera putih. <br> Anak-anak, perempuan hingga orang lanjut usia berjalan kaki berbondong-bondong, usai militer Israel memberikan jeda perang selama empat jam. <br> "Saya membawa ID saya karena saya diberi tahu akan aman, saya tidak tahu apakah saya akan diizinkan masuk atau tiba di selatan," kata Wedad Al-Ghoul, yang membawa putranya berjalan 8 hingga 9 kilometer atau sekitar 5 mil dari rumahnya di pesisir Gaza, kepada CNN. </p>
+                <h3>2. Israel Bombardir Gaza, Benarkah Mau Bangun Tandingan Terusan Suez?</h3>
+                <p>Media sosial sempat diramaikan rumor bahwa gempuran Israel selama sebulan terakhir di Gaza adalah bagian dari rencana Israel dan sekutu Barat untuk membangun kanal tandingan Terusan Suez. <br> Beberapa warganet menganggap pengeboman Israel di Gaza utara ada kaitannya dengan proyek Kanal Ben Gurion. <br>Kanal Ben Gurion disebut bakal memiliki jalur lebih luas dan lebih efisien dibanding Terusan Suez.</p> <br>
+                <h3>3. Israel Klaim Habisi Ahli Senjata Hamas di Jalur Gaza</h3>
+                <p>Militer Israel mengklaim berhasil membunuh seorang petinggi Hamas di Jalur Gaza Palestina yang merupakan pemasok senjata untuk milisi tersebut. <br> Melalui saluran Telegram pada Rabu (8/11), militer Israel mengatakan serangan udara telah menewaskan Mohsen Abu Zina, salah satu "ahli pengembang senjata Hamas yang terkemuka." <br> Israel menuturkan Zina disebut ahli mengembangkan senjata strategis, termasuk roket.</p>
+
+                <iframe width="460" height="215" src="https://www.youtube.com/embed/LHqq1pYEaCc?si=ij83EbimYhz0Vjyl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          </div>
+          <div class="col">
+            <div class="card mb-3" style="max-width: 540px;">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endblock %}
+</body>
+</html>
