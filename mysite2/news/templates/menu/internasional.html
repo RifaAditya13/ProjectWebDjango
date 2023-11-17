@@ -72,66 +72,18 @@
 
               <div class="container text-center">
                 <div class="row">
-                  {% for Berita in beritas %}
+                    {% for berita in beritas %}
                   <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="{{Berita.gambar.url}}" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">{{Berita.judul}}</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">{{Berita.kategori}}</small></p>
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'news:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  {% endfor %}
-                </div>
-              </div>
-
-
-              <br><br><br>
-
-              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
-
-              <br><br>
-
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://akcdn.detik.net.id/visual/2021/12/30/kim-jong-un_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Kim Jong Un Dukung Palestina sampai Roket Hizbullah Hujani Kota Israel</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://thumb.tvonenews.com/thumbnail/2023/11/08/654ae7c8ab789-warga-palestina-mengevakuasi-seorang-pemuda-yang-terluka-menyusul-serangan-udara-israel-di-kamp-pengungsi-khan-younis-jalur-gaza-selatan-selasa-7-november-2023_1265_711.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Palang Merah Internasional: Konvoi Kemanusiaan Bawa Pasokan Medis Mendapat Tembakan di Gaza</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://akcdn.detik.net.id/visual/2023/11/05/britain-israel-palestinians_169.jpeg?w=1300&q=80" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Penampakan Warga Dunia Kompak Turun ke Jalan Bela Palestina</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
+                    {% endfor %}
                 </div>
               </div>
 

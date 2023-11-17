@@ -72,80 +72,18 @@
 
               <div class="container text-center">
                 <div class="row">
+                    {% for berita in beritas %}
                   <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/11/09/soccer-champions-cop-munreport_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Drama 7 Gol dan Kartu Merah Kontroversial, MU Kalah Dramatis 3-4</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'news:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/09/10/erick-thohir_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Erick Thohir Beri Bocoran Pemain Naturalisasi Baru: Posisi Striker</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <br><br><br>
-
-              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
-
-              <br><br>
-
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://cloud.jpnn.com/photo/arsip/normal/2023/11/07/pound-fit-yang-diadakan-srikandi-ganjar-bersama-milenial-di-ofzu.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Srikandi Ganjar Ajak Milenial Ikut Pound Fit, Olahraga Tren yang Menyenangkan</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://akcdn.detik.net.id/visual/2023/11/04/anwar-el-ghazi_169.jpeg?w=650&q=90" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Top 3 Sports: Onana Dipuji Fans, El Ghazi Dipecat Imbas Bela Palestina</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://image.kemenpora.go.id/images/content/2023/11/06/4442/5580Menpora-Dito-Dukung-Indonesia-Jadi-Tuan-Rumah-Ajang-Olahraga-Tunarungu-Asia-Tenggara-2024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Menpora Dito Dukung Indonesia Jadi Tuan Rumah Ajang Olahraga Tunarungu Asia Tenggara 2024</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
+                    {% endfor %}
                 </div>
               </div>
 

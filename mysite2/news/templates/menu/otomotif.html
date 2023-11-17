@@ -71,81 +71,18 @@
 
               <div class="container text-center">
                 <div class="row">
+                    {% for berita in beritas %}
                   <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2019/04/25/2b5138ed-7997-4906-8c7b-281ce68c1d0f_169.jpeg?w=650&q=900" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Honda Ungkap Alasan Recall di Indonesia Belum Tuntas</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'news:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/10/25/ahm_169.png?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Redam Keraguan, Rangka eSAF dan Motor Listrik Honda Garansi 5 Tahun</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            
-              <br><br><br>
-
-              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
-
-              <br><br>
-
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://img1.icarcdn.com/006331/prev-desktop_medsos-resmi-wuling-di-indonesia-singgung-soal-wuling-bingo-sebuah-kode-133600_000000006331_dfba6f28_4ac2_4bf0_a89f_863d0bb5c44d.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Medsos Resmi Wuling di Indonesia Singgung Soal Wuling Bingo, Sebuah ‘Kode’?</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://img.antaranews.com/cache/1200x800/2023/11/07/1.jpeg.webp" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Mitsubishi Pajero raih predikat mobil bersejarah JAHFA</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://img2.icarcdn.com/195331/prev-desktop_asyik-harga-neta-v-berpotensi-makin-murah-saat-dirakit-lokal-tahun-depan-133591_000000195331_90b9b719_3da7_48c8_baa1_63b93a8a4f28.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Asyik! Harga Neta V Berpotensi Makin Murah Saat Dirakit Lokal Tahun Depan
-                            MOBIL LISTRIK</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
+                    {% endfor %}
                 </div>
               </div>
 

@@ -80,20 +80,20 @@
 
               <div class="container text-center">
                 <div class="row">
-                    {% for Berita in beritas %}
+                    {% for berita in beritas %}
                   <div class="col">
                         <div class="card" style="width: 20rem;">
-                            <img src="{{Berita.gambar.url}}" class="card-img-top" alt="...">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <p>{{Berita.kategori}}</p>
-                              <h5 class="card-title" style="margin-top: -10px;">{{Berita.judul}}</h5>
-                              <a href="{% url 'news:isi' Berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'news:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
                             </div>
                           </div>
                     </div>
                     {% endfor %}
                 </div>
-            </div>
+              </div>
                 
               <br><br><br>
 

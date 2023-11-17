@@ -64,6 +64,29 @@
                 </div>
               </div>
             
+              <br><br>
+
+              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
+
+              <br><br>
+
+              <div class="container text-center">
+                <div class="row">
+                    {% for berita in updates %}
+                  <div class="col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'core:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                            </div>
+                          </div>
+                    </div>
+                    {% endfor %}
+                </div>
+              </div>
+
               <br><br><br>
 
               <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Hangat</h3>
@@ -107,46 +130,6 @@
                 </div>
               </div>
 
-              <br><br><br>
-
-              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
-
-              <br><br>
-
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01heehsbrptzbs8c3n58yxkb6e.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Ciri-Ciri Gaya Hidup Berkelanjutan dan Pengertiannya</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger bg-danger">Go somewhere</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://thumb.viva.id/antvklik/1265x711/2023/11/06/6548ab1aa60bf-festival-antv-rame-meriahkan-kulon-progo_antvklik.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Festival ANTV Rame Meriahkan Kulon Progo dengan Hiburan yang Tak Terlupakan!</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger bg-danger">Go somewhere</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://cdn1-production-images-kly.akamaized.net/vetNeyQyOykgze2BCIYydPrdn1A=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4638104/original/084163100_1699307938-AP23310745767553.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Hasil dan Klasemen Liga Inggris Tadi Malam: Dipecundangi Chelsea, Tottenham Tergeser Man City di Posisi Puncak</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger bg-danger">Go somewhere</a>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
 
               <br><br><br>
 

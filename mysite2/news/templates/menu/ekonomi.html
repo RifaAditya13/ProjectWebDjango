@@ -71,81 +71,18 @@
 
               <div class="container text-center">
                 <div class="row">
+                    {% for berita in beritas %}
                   <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/11/08/bacapres-prabowo-subianto-menyampaikan-pidatonya-pada-sarasehan-100-ekonom-indonesia-di-ballroom-menara-bank-mega_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Alasan Prabowo Ingatkan Buruh Tak Banyak Tuntut Upah Naik ke Pengusaha</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'news:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/10/12/bongkar-muat-beras-impor-dari-vietnam-6_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Bulog Batalkan Rencana Impor 500 Ribu Ton Beras</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
->
-
-
-              <br><br><br>
-
-              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
-
-              <br><br>
-
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://akcdn.detik.net.id/visual/2023/10/24/foto-kolase-ganjar-pranowo-prabowo-subianto-dan-anies-baswedan-cnbc-indonesia_169.jpeg?w=400&q=90" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Anies-Prabowo-Ganjar Blak-Blakan Hari Ini Adu Gagasan Ekonomi</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://www.bi.go.id/id/publikasi/ruang-media/news-release/PublishingImages/Pages/sp_2526623/Publishing_Image_Statistik.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Pertumbuhan Ekonomi Indonesia Tetap Kuat Pada TRIWULAN III 2023</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://statik.tempo.co/data/2023/11/07/id_1252049/1252049_720.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Terkini: Maukah Sri Mulyani Lunasi Utang Rp 16 T ke Bulog hingga Penumpang Whoosh Gratis Akses Wisata</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
+                    {% endfor %}
                 </div>
               </div>
 

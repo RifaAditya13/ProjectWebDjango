@@ -22,7 +22,7 @@ def isi(request, id):
 def trending(request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.kategori.objects.all()
-    catID = 1
+    catID = 13
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -36,7 +36,7 @@ def trending(request):
 def internasional(request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.kategori.objects.all()
-    catID = 2
+    catID = 14
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -50,7 +50,7 @@ def internasional(request):
 def ekonomi (request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.kategori.objects.all()
-    catID = 3
+    catID = 15
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -64,7 +64,7 @@ def ekonomi (request):
 def olahraga(request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.kategori.objects.all()
-    catID = 4
+    catID = 16
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -78,7 +78,7 @@ def olahraga(request):
 def otomotif(request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.kategori.objects.all()
-    catID = 5
+    catID = 17
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -86,13 +86,13 @@ def otomotif(request):
     
     context = {'beritas' : berita, 'kategiori' : kategori}
 
-    return render(request, 'menu/otomotif.html')
+    return render(request, 'menu/otomotif.html', context)
 
 
 def hiburan(request):
     berita = models.berita.objects.filter(status='publish')
     kategori = models.kategori.objects.all()
-    catID = 6
+    catID = 18
     if catID :
         berita = models.berita.objects.filter(kategori = catID)
     else :
@@ -100,4 +100,4 @@ def hiburan(request):
     
     context = {'beritas' : berita, 'kategiori' : kategori}
 
-    return render(request, 'menu/hiburan.html')
+    return render(request, 'menu/hiburan.html', context)

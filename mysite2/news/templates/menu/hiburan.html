@@ -69,84 +69,20 @@
 
               <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Hangat</h3>
 
-              <br><br>
-
               <div class="container text-center">
                 <div class="row">
+                    {% for berita in beritas %}
                   <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/07/14/ilustrasi-sag-aftra_169.png?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Serikat Aktor Setujui Kesepakatan demi Akhiri 118 Hari Mogok Kerja</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{berita.gambar.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p>{{berita.kategori}}</p>
+                              <h5 class="card-title" style="margin-top: -10px;">{{berita.judul}}</h5>
+                              <a href="{% url 'news:isi' berita.id %}" class="btn btn-danger">Selengkapnya</a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="https://akcdn.detik.net.id/visual/2023/11/09/the-boys-season-4-2_169.jpeg?w=650&q=90" class="img-fluid rounded-start w-100 h-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">The Boys Season 4 Dijadwalkan Tayang 2024</h5>
-                            <button type="button" class="btn btn-danger" onclick="location.href='/isiberita'">Selengkapnya</button>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <br><br><br>
-
-              <h3 class="fw-bold" style="text-align: center; font-family: sans-serif;">Berita Terbaru Hari Ini</h3>
-
-              <br><br>
-
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://acehbesarkab.go.id/media/2023.11/2890664e-d387-4e91-ab94-e9eecb3113441.jpeg" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Seniman DKA Ramaikan Panggung Hiburan Anjungan Aceh Besar</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://mmc.tirto.id/image/otf/700x0/2023/11/01/shoppertainment--saat-konten-hiburan-berhasil-membujuk-pelanggan-untuk-belanja--sidejob--fuad-01_ratio-16x9.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Shoppertainment: Strategi Konten Hiburan Berhasil Rayu Pelanggan</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://pewarta.co/wp-content/uploads/2023/11/Batu-Goncang-Medan-750x432.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Yuk Ramaikan Hiburan Batu Goncang di Medan</h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-danger">Selengkapnya</a>
-                        </div>
-                      </div>
-                  </div>
+                    {% endfor %}
                 </div>
               </div>
 
